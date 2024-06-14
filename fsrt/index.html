@@ -4,27 +4,27 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
+<!--  <meta name="description" content="DESCRIPTION META TAG">
   <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>-->
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+<!--  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">-->
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
+<!--  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">-->
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">-->
 
 
-  <title>Academic Project Page</title>
+  <title>FSRT: Facial Scene Representation Transformer</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -43,6 +43,14 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  
+  <style>
+@media (max-width: 840px) {
+  .dynbr {
+    display: none;
+  }
+}
+  </style>
 </head>
 <body>
 
@@ -52,7 +60,11 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-3 publication-title">FSRT: Facial Scene Representation Transformer<br>for Face Reenactment from Factorized Appearance, Head-pose, and Facial Expression Features</h1>
+            <h1 class="title is-3 publication-title">
+              FSRT: Facial Scene Representation Transformer<br class="dynbr">
+              for Face Reenactment from Factorized Appearance,<br class="dynbr">
+              Head-pose, and Facial Expression Features
+            </h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -64,10 +76,12 @@
                   </span>
                   </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">University of Bonn<br>CVPR 2024</span>
+                  <div class="is-size-6 publication-authors">
+                    <span class="author-block">Autonomous Intelligent Systems - Computer Science Institute VI and Center for Robotics, University of Bonn, Germany<br>Lamarr Institute for Machine Learning and Artificial Intelligence, Germany</span>
                   </div>
-
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">CVPR 2024</span>
+                  </div>
                   <div class="column has-text-centered">
                     <div class="publication-links">
 
@@ -132,7 +146,52 @@
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
+<!-- End Paper abstract -->
+
+
+<!-- Method Overview -->
+<section class="hero is-small">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+    <h2 class="title is-3">Method Overview</h2>
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/method_overview.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-justified">
+        Overview of our method with relative motion transfer. The source image(s) are encoded along with keypoints, capturing head pose, and facial expression vectors to a set-latent representation of the source person. The decoder attends this representation for a query pixel, conditioned on keypoints and a facial expression vector extracted from the driving frame. Images and videos from the VoxCeleb test set.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End Method Overview -->
+
+
+<!-- Generalizing to CelebA-HQ -->
+<section class="hero is-small">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+    <h2 class="title is-3">Generalizing to CelebA-HQ</h2>
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/CelebA-HQ_rel_1.mp4"
+        type="video/mp4">
+      </video>
+      <br>
+      <br>
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/CelebA-HQ_rel_2.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-justified">
+        Our model generalizes to source images from the CelebA-HQ dataset (top rows) and driving videos from the official VoxCeleb2 test set (left).
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End Generalizing to CelebA-HQ -->
 
 
 <!--BibTex citation -->
