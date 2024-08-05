@@ -194,6 +194,21 @@
 <!-- End Generalizing to CelebA-HQ -->
 
 
+<!-- Architecture -->
+<section class="hero is-small">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+    <h2 class="title is-3">Architecture</h2>
+      <img src="static/images/architecture.svg" width="100%"/>
+      <h2 class="subtitle has-text-justified">
+      Given the driving frame and source images, we extract facial keypoints and latent expression vectors. Extracted source information are used to generate the input representation of the Patch CNN. The encoder infers the set-latent source face  representation from the patch embeddings. The decoder is applied for each query pixel individually and is conditioned with the driving keypoints and the latent driving expression vector.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End Architecture -->
+
+
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
@@ -202,6 +217,7 @@
   title={{FSRT}: Facial Scene Representation Transformer for Face Reenactment from Factorized Appearance, Head-pose, and Facial Expression Features},
   author={Rochow, Andre and Schwarz, Max and Behnke, Sven},
   booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages={7716--7726},
   year={2024}
 }
 </code></pre>
